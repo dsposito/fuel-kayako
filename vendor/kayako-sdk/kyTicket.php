@@ -1778,7 +1778,7 @@ class kyTicket extends kyObjectWithCustomFieldsBase {
 	 * @param string $subject Subject of new ticket.
 	 * @return kyTicket
 	 */
-	static public function createNew(kyDepartment $department, $creator, $contents, $subject) {
+	static public function createNew(kyDepartment $department = null, $creator = null, $contents = null, $subject = null) {
 		$new_ticket = self::createNewSansCreator($department, $contents, $subject);
 		$new_ticket->setCreator($creator);
 		return $new_ticket;

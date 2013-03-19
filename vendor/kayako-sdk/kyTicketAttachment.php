@@ -360,7 +360,7 @@ class kyTicketAttachment extends kyObjectBase {
 	 * @param string $file_name Filename.
 	 * @return kyTicketAttachment
 	 */
-	static public function createNew($ticket_post, $contents, $file_name) {
+	static public function createNew($ticket_post = null, $contents = null, $file_name = null) {
 		$new_ticket_attachment = new kyTicketAttachment();
 
 		$new_ticket_attachment->setTicketId($ticket_post->getTicketId());

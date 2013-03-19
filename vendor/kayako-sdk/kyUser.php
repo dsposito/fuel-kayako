@@ -755,7 +755,7 @@ class kyUser extends kyObjectBase {
 	 * @param string $password Password of new user.
 	 * @return kyUser
 	 */
-	static public function createNew($full_name, $email, kyUserGroup $user_group, $password) {
+	static public function createNew($full_name = null, $email = null, kyUserGroup $user_group = null, $password = null) {
 		$new_user = new kyUser();
 		$new_user->setFullName($full_name);
 		$new_user->addEmail($email);

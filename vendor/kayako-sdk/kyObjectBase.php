@@ -101,7 +101,7 @@ abstract class kyObjectBase {
 	/**
 	 * Creates new object. Compatible with method chaining.
 	 */
-	static public function createNewGeneric() {
+	static public function createNew() {
 		return new static();
 	}
 

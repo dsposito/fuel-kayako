@@ -625,7 +625,7 @@ class kyTicketNote extends kyObjectBase {
 	 * @param string $contents Contents of new note.
 	 * @return kyTicketNote
 	 */
-	static public function createNew(kyTicket $ticket, kyStaff $creator, $contents) {
+	static public function createNew(kyTicket $ticket = null, kyStaff $creator = null, $contents = null) {
 		$new_ticket_note = new kyTicketNote();
 
 		$new_ticket_note->setTicketId($ticket->getId());

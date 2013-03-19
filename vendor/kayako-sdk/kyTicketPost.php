@@ -749,7 +749,7 @@ class kyTicketPost extends kyObjectBase {
 	 * @param string $contents Contents of new post.
 	 * @return kyTicketPost
 	 */
-	static public function createNew($ticket, $creator, $contents) {
+	static public function createNew($ticket = null, $creator = null, $contents = null) {
 		$new_ticket_post = new kyTicketPost();
 		$new_ticket_post->setTicket($ticket);
 		$new_ticket_post->setCreator($creator);

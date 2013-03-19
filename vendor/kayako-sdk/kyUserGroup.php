@@ -149,7 +149,7 @@ class kyUserGroup extends kyObjectBase {
 	 * @param string $type Type of new user group - one of kyUserGroup::TYPE_* constants.
 	 * @return kyUserGroup
 	 */
-	static public function createNew($title, $type = self::TYPE_REGISTERED) {
+	static public function createNew($title = null, $type = self::TYPE_REGISTERED) {
 		$new_user_group = new kyUserGroup();
 		$new_user_group->setTitle($title);
 		$new_user_group->setType($type);
