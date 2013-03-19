@@ -192,7 +192,7 @@ abstract class kyObjectBase {
 	 * @param array $search_parameters Optional. Additional search parameters.
 	 * @return kyResultSet
 	 */
-	static public function getAllGeneric($search_parameters = array()) {
+	static public function getAll($search_parameters = array()) {
 		$result = self::getRESTClient()->get(static::$controller, $search_parameters);
 		$objects = array();
 		if (array_key_exists(static::$object_xml_name, $result)) {

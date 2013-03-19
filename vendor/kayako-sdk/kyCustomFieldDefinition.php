@@ -180,7 +180,7 @@ class kyCustomFieldDefinition extends kyObjectBase {
 	 */
 	static public function getAll($search_parameters = array()) {
 		if (self::$definitions === null) {
-			self::$definitions = parent::getAllGeneric($search_parameters);
+			self::$definitions = parent::getAll($search_parameters);
 		}
 
 		return self::$definitions;

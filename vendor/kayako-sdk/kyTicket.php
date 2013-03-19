@@ -645,7 +645,7 @@ class kyTicket extends kyObjectWithCustomFieldsBase {
 	 * @throws InvalidArgumentException
 	 * @return kyResultSet
 	 */
-	static public function getAll($departments, $ticket_statuses = array(), $owner_staffs = array(), $users = array()) {
+	static public function getAll($departments = null, $ticket_statuses = array(), $owner_staffs = array(), $users = array()) {
 		$search_parameters = array('ListAll');
 
 		$department_ids = array();
@@ -700,7 +700,7 @@ class kyTicket extends kyObjectWithCustomFieldsBase {
 		else
 			$search_parameters[] = '-1';
 
-		return parent::getAllGeneric($search_parameters);
+		return parent::getAll($search_parameters);
 	}
 
 	/**

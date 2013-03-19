@@ -233,7 +233,7 @@ class kyTicketNote extends kyObjectBase {
 
 		$search_parameters[] = $ticket_id;
 
-		return parent::getAllGeneric($search_parameters);
+		return parent::getAll($search_parameters);
 	}
 
 	/**

@@ -244,7 +244,7 @@ class kyUser extends kyObjectBase {
 			$search_parameters[] = $max_items;
 		}
 
-		return parent::getAllGeneric($search_parameters);
+		return parent::getAll($search_parameters);
 	}
 
 	/**
