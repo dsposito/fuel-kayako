@@ -35,7 +35,7 @@ class kyTicketCustomFieldGroup extends kyCustomFieldGroupBase {
 	 * @param int $ticket_id Ticket identifier.
 	 * @return kyResultSet
 	 */
-	static public function getAll($ticket_id) {
+	static public function getAll($ticket_id = null) {
 		$result = self::getRESTClient()->get(static::$controller, array($ticket_id));
 		$objects = array();
 		if (array_key_exists(static::$object_xml_name, $result)) {

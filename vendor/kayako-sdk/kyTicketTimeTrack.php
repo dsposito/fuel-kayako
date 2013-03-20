@@ -194,7 +194,7 @@ class kyTicketTimeTrack extends kyObjectBase {
 	 * @param int $ticket_id Ticket identifier.
 	 * @return kyResultSet
 	 */
-	static public function getAll($ticket_id) {
+	static public function getAll($ticket_id = null) {
 		$search_parameters = array('ListAll');
 
 		$search_parameters[] = $ticket_id;
@@ -209,7 +209,7 @@ class kyTicketTimeTrack extends kyObjectBase {
 	 * @param int $id Ticket time track identifier.
 	 * @return kyTicketTimeTrack
 	 */
-	static public function get($ticket_id, $id) {
+	static public function get($ticket_id, $id = null) {
 		return parent::get(array($ticket_id, $id));
 	}
 
