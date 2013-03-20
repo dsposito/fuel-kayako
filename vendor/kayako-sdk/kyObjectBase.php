@@ -324,7 +324,8 @@ abstract class kyObjectBase {
 			foreach ($class->getProperties(ReflectionProperty::IS_PROTECTED|ReflectionProperty::IS_PUBLIC) as $property) {
 				/* @var $property ReflectionProperty */
 				$comment = $property->getDocComment();
-				$short_description = trim(next(explode("\n", $comment)), " *\t\n\r");
+				$comment_array = explode("\n", $comment);
+				$short_description = trim(next($comment_array), " *\t\n\r");
 
 				$parameters = ky_get_tag_parameters($comment, 'apiField');
 				if ($parameters === false)
